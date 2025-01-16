@@ -409,10 +409,32 @@ def download_pdb(PDB_ID, outfile):
     "return PDB file from database online"
     if os.path.exists(outfile):
         print("ALREADY DOWNLOADED")
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     else:
         url = 'https://files.rcsb.org/download/' + str(PDB_ID) + '.pdb'
+=======
+=======
+>>>>>>> Stashed changes
+<<<<<<< HEAD
+    if os.path.exists(outfile) == True: 
+        url = str(PDB_ID)+'.pdb'
+        print("Processing your sequence", url)
+        (url, outfile)
+    elif os.path.exists(outfile)== False:
+        url = 'https://files.rcsb.org/download/'+str(PDB_ID)+'.pdb'
+=======
+    else:
+        url = 'https://files.rcsb.org/download/' + str(PDB_ID) + '.pdb'
+>>>>>>> fd5d58f7a6fb2b9118ee62e066582fc9a090965f
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
         print("DOWNLOADING PDB FILE FROM", url)
         urllib.request.urlretrieve(url, outfile)
+
+
 
 
 def get_motif(PDB_ID, start_idxs, end_idxs, data_top_dir='../data', chain='A'):
